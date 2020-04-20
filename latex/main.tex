@@ -204,6 +204,28 @@ such as vehicle continuity.
   \item Repeat the experiments in a constrained case (i.e. road capacity for one of the modes)
   \item Explore relationship between choice models and constraints in MATSim
   \item Generalize to departure time choice / location choice / route choice
+  \item What about the individual level? We may have cases where an agent has no
+  access to public transport or a bike, but randomly the error for the car mode
+  is strongly negative. We would then produce plans with unrealistically long
+  walk modes. Is this a relevant problem? Can we quantify the probability of
+  this happening?
+  \item Interestingly, we can also analytically investigate the ``scoring''
+  plot of MATSim. Because now we generate EV-distributed scores, of which we
+  show the average or the maximum in the the ``scorestats.txt'' plot. For these
+  simple examples, we can actually analytically derive these values (especially
+  the maximum as Gumbel is maximum-stable). Would be another interesting aspect
+  to add to the initial toy example.
+  \item Explore the runtime of this in a larger scenario, and also convergence.
+  I would assume that the hashing would not substantially slow down the simulation,
+  but it would be noticeable. Would we see faster convergence?
+  \item ... certainly if we use BestScore, so comparing BestScore with ChangeExpBeta
+  in this case is interesting. This especially becomes interesting in the
+  constrained case (for the unconstrained case there is no reason \textit{not}
+  to use BestScore). Maybe one could think about a combination of BestScore
+  and ChangeExpBeta.
+  \item All of this could be very interesting in combination with Gunnar's
+  approach of making a emulation of the simulation to apply the replanning
+  strategies multiple times.
 \end{itemize}
 
 \end{document}
