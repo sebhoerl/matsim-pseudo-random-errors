@@ -1,0 +1,8 @@
+dependency-reduced-pom.xml
+target
+output
+simulation_output
+.settings
+.project
+.classpath
+.ipynb_checkpoints
